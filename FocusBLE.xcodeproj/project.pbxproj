@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6921AAD11831766E007FF320 /* NSData+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6921AAD01831766E007FF320 /* NSData+Conversion.m */; };
+		69C0F7D91841C819008C4638 /* tdcs_bt_aes.bin in Resources */ = {isa = PBXBuildFile; fileRef = 69C0F7D81841C819008C4638 /* tdcs_bt_aes.bin */; };
+		69EA901D18431A7B0074A383 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EA901C18431A7B0074A383 /* MBProgressHUD.m */; };
+		69EE3A5D183493E000D6490C /* CBUUID+StringExtraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EE3A5C183493E000D6490C /* CBUUID+StringExtraction.m */; };
+		69FBCBCC17DB8F0700299182 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FBCBCB17DB8F0700299182 /* Default-568h@2x.png */; };
+		B5FDACF014D1395E0032864B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FDACEF14D1395E0032864B /* UIKit.framework */; };
+		B5FDACF214D1395E0032864B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FDACF114D1395E0032864B /* Foundation.framework */; };
+		B5FDACF414D1395E0032864B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FDACF314D1395E0032864B /* CoreGraphics.framework */; };
+		B5FDACFA14D1395E0032864B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5FDACF814D1395E0032864B /* InfoPlist.strings */; };
+		B5FDACFC14D1395E0032864B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FDACFB14D1395E0032864B /* main.m */; };
+		B5FDAD0014D1395E0032864B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FDACFF14D1395E0032864B /* AppDelegate.m */; };
+		B5FDAD0314D1395E0032864B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FDAD0214D1395E0032864B /* ViewController.m */; };
+		B5FDAD0614D1395E0032864B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FDAD0414D1395E0032864B /* ViewController.xib */; };
+		B5FDAD0D14D139770032864B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FDAD0C14D139770032864B /* CoreBluetooth.framework */; };
+		B5FDAD1014D139960032864B /* BlueToothMe.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FDAD0F14D139960032864B /* BlueToothMe.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6921AACF1831766E007FF320 /* NSData+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Conversion.h"; sourceTree = "<group>"; };
+		6921AAD01831766E007FF320 /* NSData+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Conversion.m"; sourceTree = "<group>"; };
+		69338D88183179C300B383C9 /* readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.markdown; sourceTree = "<group>"; };
+		69C0F7D81841C819008C4638 /* tdcs_bt_aes.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = tdcs_bt_aes.bin; sourceTree = "<group>"; };
+		69EA901B18431A7B0074A383 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		69EA901C18431A7B0074A383 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		69EE3A5B183493E000D6490C /* CBUUID+StringExtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringExtraction.h"; sourceTree = "<group>"; };
+		69EE3A5C183493E000D6490C /* CBUUID+StringExtraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringExtraction.m"; sourceTree = "<group>"; };
+		69FBCBCB17DB8F0700299182 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B5FDACEB14D1395D0032864B /* FocusBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FDACEF14D1395E0032864B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B5FDACF114D1395E0032864B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5FDACF314D1395E0032864B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B5FDACF714D1395E0032864B /* FocusBLE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FocusBLE-Info.plist"; sourceTree = "<group>"; };
+		B5FDACF914D1395E0032864B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5FDACFB14D1395E0032864B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5FDACFD14D1395E0032864B /* FocusBLE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FocusBLE-Prefix.pch"; sourceTree = "<group>"; };
+		B5FDACFE14D1395E0032864B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5FDACFF14D1395E0032864B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5FDAD0114D1395E0032864B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B5FDAD0214D1395E0032864B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B5FDAD0514D1395E0032864B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		B5FDAD0C14D139770032864B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		B5FDAD0E14D139960032864B /* BlueToothMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothMe.h; sourceTree = "<group>"; };
+		B5FDAD0F14D139960032864B /* BlueToothMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothMe.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5FDACE814D1395D0032864B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FDAD0D14D139770032864B /* CoreBluetooth.framework in Frameworks */,
+				B5FDACF014D1395E0032864B /* UIKit.framework in Frameworks */,
+				B5FDACF214D1395E0032864B /* Foundation.framework in Frameworks */,
+				B5FDACF414D1395E0032864B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69C0F7D71841C7FE008C4638 /* Firmware */ = {
+			isa = PBXGroup;
+			children = (
+				69C0F7D81841C819008C4638 /* tdcs_bt_aes.bin */,
+			);
+			name = Firmware;
+			path = CBDemo/Firmware;
+			sourceTree = "<group>";
+		};
+		69EA901A18431A7B0074A383 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				69EA901B18431A7B0074A383 /* MBProgressHUD.h */,
+				69EA901C18431A7B0074A383 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		B5FDACE014D1395D0032864B = {
+			isa = PBXGroup;
+			children = (
+				69EA901A18431A7B0074A383 /* MBProgressHUD */,
+				69338D88183179C300B383C9 /* readme.markdown */,
+				69FBCBCB17DB8F0700299182 /* Default-568h@2x.png */,
+				69C0F7D71841C7FE008C4638 /* Firmware */,
+				B5FDACF514D1395E0032864B /* Classes */,
+				B5FDACEE14D1395D0032864B /* Frameworks */,
+				B5FDACEC14D1395D0032864B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5FDACEC14D1395D0032864B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5FDACEB14D1395D0032864B /* FocusBLE.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5FDACEE14D1395D0032864B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5FDAD0C14D139770032864B /* CoreBluetooth.framework */,
+				B5FDACEF14D1395E0032864B /* UIKit.framework */,
+				B5FDACF114D1395E0032864B /* Foundation.framework */,
+				B5FDACF314D1395E0032864B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5FDACF514D1395E0032864B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B5FDAD1114D1399B0032864B /* BlueToothMe */,
+				B5FDACFE14D1395E0032864B /* AppDelegate.h */,
+				B5FDACFF14D1395E0032864B /* AppDelegate.m */,
+				B5FDAD0114D1395E0032864B /* ViewController.h */,
+				B5FDAD0214D1395E0032864B /* ViewController.m */,
+				B5FDAD0414D1395E0032864B /* ViewController.xib */,
+				B5FDACF614D1395E0032864B /* Supporting Files */,
+				6921AACF1831766E007FF320 /* NSData+Conversion.h */,
+				6921AAD01831766E007FF320 /* NSData+Conversion.m */,
+				69EE3A5B183493E000D6490C /* CBUUID+StringExtraction.h */,
+				69EE3A5C183493E000D6490C /* CBUUID+StringExtraction.m */,
+			);
+			name = Classes;
+			path = CBDemo;
+			sourceTree = "<group>";
+		};
+		B5FDACF614D1395E0032864B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5FDACF714D1395E0032864B /* FocusBLE-Info.plist */,
+				B5FDACF814D1395E0032864B /* InfoPlist.strings */,
+				B5FDACFB14D1395E0032864B /* main.m */,
+				B5FDACFD14D1395E0032864B /* FocusBLE-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5FDAD1114D1399B0032864B /* BlueToothMe */ = {
+			isa = PBXGroup;
+			children = (
+				B5FDAD0E14D139960032864B /* BlueToothMe.h */,
+				B5FDAD0F14D139960032864B /* BlueToothMe.m */,
+			);
+			name = BlueToothMe;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5FDACEA14D1395D0032864B /* FocusBLE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5FDAD0914D1395E0032864B /* Build configuration list for PBXNativeTarget "FocusBLE" */;
+			buildPhases = (
+				B5FDACE714D1395D0032864B /* Sources */,
+				B5FDACE814D1395D0032864B /* Frameworks */,
+				B5FDACE914D1395D0032864B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FocusBLE;
+			productName = CBDemo;
+			productReference = B5FDACEB14D1395D0032864B /* FocusBLE.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5FDACE214D1395D0032864B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = B5FDACE514D1395D0032864B /* Build configuration list for PBXProject "FocusBLE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B5FDACE014D1395D0032864B;
+			productRefGroup = B5FDACEC14D1395D0032864B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5FDACEA14D1395D0032864B /* FocusBLE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5FDACE914D1395D0032864B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FDACFA14D1395E0032864B /* InfoPlist.strings in Resources */,
+				69C0F7D91841C819008C4638 /* tdcs_bt_aes.bin in Resources */,
+				B5FDAD0614D1395E0032864B /* ViewController.xib in Resources */,
+				69FBCBCC17DB8F0700299182 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5FDACE714D1395D0032864B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6921AAD11831766E007FF320 /* NSData+Conversion.m in Sources */,
+				B5FDACFC14D1395E0032864B /* main.m in Sources */,
+				B5FDAD0014D1395E0032864B /* AppDelegate.m in Sources */,
+				69EE3A5D183493E000D6490C /* CBUUID+StringExtraction.m in Sources */,
+				B5FDAD0314D1395E0032864B /* ViewController.m in Sources */,
+				B5FDAD1014D139960032864B /* BlueToothMe.m in Sources */,
+				69EA901D18431A7B0074A383 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B5FDACF814D1395E0032864B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FDACF914D1395E0032864B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B5FDAD0414D1395E0032864B /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FDAD0514D1395E0032864B /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5FDAD0714D1395E0032864B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B5FDAD0814D1395E0032864B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5FDAD0A14D1395E0032864B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shudong Mao (YYS8A32X52)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CBDemo/FocusBLE-Prefix.pch";
+				INFOPLIST_FILE = "CBDemo/FocusBLE-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = FocusBLE;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F8D410D3-330B-40CF-B8C4-0717A244498F";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B5FDAD0B14D1395E0032864B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: FOCUS LABS LIMITED (H2HM26KZYS)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CBDemo/FocusBLE-Prefix.pch";
+				INFOPLIST_FILE = "CBDemo/FocusBLE-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = FocusBLE;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E556E70B-7701-46D2-AEC0-D4AADEDA5277";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5FDACE514D1395D0032864B /* Build configuration list for PBXProject "FocusBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5FDAD0714D1395E0032864B /* Debug */,
+				B5FDAD0814D1395E0032864B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5FDAD0914D1395E0032864B /* Build configuration list for PBXNativeTarget "FocusBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5FDAD0A14D1395E0032864B /* Debug */,
+				B5FDAD0B14D1395E0032864B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5FDACE214D1395D0032864B /* Project object */;
+}

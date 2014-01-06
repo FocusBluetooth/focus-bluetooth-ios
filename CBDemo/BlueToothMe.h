@@ -1,4 +1,12 @@
-GNU GENERAL PUBLIC LICENSE
+//
+//  BlueToothMe.h
+//  CBDemo
+//
+//  Created by Sergio on 25/01/12.
+//
+
+/*
+                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
@@ -631,8 +639,8 @@ to attach them to the start of each source file to most effectively
 state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-    {one line to give the program's name and a brief idea of what it does.}
-    Copyright (C) {year}  {name of author}
+    <one line to give the program's name and a brief idea of what it does.>
+    Copyright (C) <year>  <name of author>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -652,7 +660,7 @@ Also add information on how to contact you by electronic and paper mail.
   If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
 
-    {project}  Copyright (C) {year}  {fullname}
+    <program>  Copyright (C) <year>  <name of author>
     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type `show c' for details.
@@ -672,3 +680,116 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
+*/
+
+#import <Foundation/Foundation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+
+#define kNewBlueToothPeripheralDiscoveredNotification @"kNewBlueToothPeripheralDiscoveredNotification"
+#define kBlueToothPeripheralConnectedNotification @"kBlueToothPeripheralConnectedNotification"
+#define kBlueToothPeripheralDisconnectedNotification @"kBlueToothPeripheralDisconnectedNotification"
+
+@protocol BlueToothMeDelegate <NSObject>
+@required
+
+- (void)peripheralDidWriteChracteristic:(CBCharacteristic *)characteristic 
+                         withPeripheral:(CBPeripheral *)peripheral 
+                              withError:(NSError *)error;
+
+- (void)peripheralDidReadChracteristic:(CBCharacteristic *)characteristic 
+                        withPeripheral:(CBPeripheral *)peripheral 
+                             withError:(NSError *)error;
+
+@optional
+
+- (void)hardwareDidNotifyBehaviourOnCharacteristic:(CBCharacteristic *)characteristic
+                                    withPeripheral:(CBPeripheral *)peripheral
+                                             error:(NSError *)error;
+
+
+@end
+
+
+#define CHARACTERISTIC_BATTERY_LEVEL   @"fff1"
+#define CHARACTERISTIC_ACTUAL_CURRENT   @"fff2"
+#define CHARACTERISTIC_MODE   @"fff3"
+#define CHARACTERISTIC_ELECTRODES_MODE   @"fff4"
+
+#define CHARACTERISTIC_TIME_IN_ACTIVE_MODE   @"fff6"
+#define CHARACTERISTIC_FW_UPDATE_CONTROL   @"fff7"
+#define CHARACTERISTIC_FW_DATA_BUFFER   @"fff8"
+#define CHARACTERISTIC_PIN_CODE   @"fff9"
+
+#define CHARACTERISTIC_MAX_CURRENT   @"fff5"
+#define CHARACTERISTIC_CURRENT_OFFSET   @"fffa"
+#define CHARACTERISTIC_CURRENT_RISE_FALL_TIME   @"fffb"
+#define CHARACTERISTIC_PULSE_WIDTH   @"fffc"
+#define CHARACTERISTIC_PULSE_PERIOD   @"fffd"
+
+
+
+#define CBUUID_DEVICE_INFO @"180a"
+
+#define CBUUID_CHARACTERISTIC_SYSYTEM_ID @"2a23"
+#define CBUUID_CHARACTERISTIC_MODEL_NUMBER @"2a24"
+#define CBUUID_CHARACTERISTIC_SERIAL_NUMBER @"2a25"
+#define CBUUID_CHARACTERISTIC_FIRMWARE @"2a26"
+#define CBUUID_CHARACTERISTIC_HARDWARE @"2a27"
+#define CBUUID_CHARACTERISTIC_SOFTWARE @"2a28"
+#define CBUUID_CHARACTERISTIC_MANUFACTURE_NAME @"2a29"
+#define CBUUID_CHARACTERISTIC_REGULATION_CERT @"2a2a"
+
+
+
+typedef enum
+{
+    BLUETOOTH_STATUS_DISCONNECTED = 0,
+    BLUETOOTH_STATUS_FAIL_TO_CONNECT = 1,
+    BLUETOOTH_STATUS_CONNECTED = 2
+}BLUETOOTH_STATUS;
+
+typedef void (^eventHardwareBlock)(CBPeripheral *peripheral, BLUETOOTH_STATUS status, NSError *error);
+
+@interface BlueToothMe : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
+{
+    NSMutableArray *dicoveredPeripherals;
+    NSArray *letWriteDataCBUUID;
+    id delegate;
+    
+@private
+    CBCentralManager *manager;
+    CBPeripheral *testPeripheral;
+    NSArray *servicesCBUUID;
+    NSDictionary *characteristicsCBUUID;
+}
+
++ (BlueToothMe *)shared;
+- (void)startScan;
+- (void)stopScan;
+- (void)setServicesUID:(NSArray *)cbuuid;
+- (void)setCharacteristics:(NSArray *)characteristics forServiceCBUUID:(NSString *)serviceCBUUID;
+- (void)setValuesToNotify:(NSArray *)notifiers;
+- (void)hardwareResponse:(eventHardwareBlock)block;
+- (void)connectPeripheral:(CBPeripheral*)testPeripheral;
+- (void)sendDataToDevice:(NSData *)dataToSend onCharacteristic:(NSString *)characteristic;
+- (void)disconnectPeripheral:(CBPeripheral*)peripheralToDisconnect;
+- (void)readValueFromDeviceOnCharacteristic:(NSString*)characteristic;
+
+- (void)readDeviceInfoCharacteristics;
+
++ (NSData *)decToOneByteData:(int)dec;
++ (NSData *)decToTwoByteData:(int)dec;
++ (NSData *)hexToData:(NSString * )hexString;
++ (void)readFirmwareFileWithBlock:(void(^)(NSData *dataToSend, BOOL finished))block;
+
+@property (nonatomic, strong) CBCentralManager *manager;
+@property (nonatomic, strong) NSMutableArray *dicoveredPeripherals;
+@property (nonatomic, strong) NSArray *servicesCBUUID;
+@property (nonatomic, strong) CBPeripheral *testPeripheral;
+@property (nonatomic, strong) NSDictionary *characteristicsCBUUID;
+@property (nonatomic, strong) NSArray *letWriteDataCBUUID;
+@property (nonatomic, strong) id<BlueToothMeDelegate> delegate;
+
+@property (nonatomic, strong) NSMutableDictionary * characteristicMeta;
+
+@end
